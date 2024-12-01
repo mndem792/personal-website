@@ -178,6 +178,28 @@ h3 {
     right: 0;
 }
 
+.navbar--logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar--logo-image {
+    width: 80px; /* Adjust as needed */
+    border-radius: 50%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    margin-right: 20px;
+}
+
+.navbar--logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px; /* Adjust as needed */
+    line-height: 1.4; /* Space between lines */
+    color: #333; /* Adjust text color */
+}
+
 .navbar--items > ul {
     list-style: none;
     display: flex;
@@ -193,7 +215,7 @@ h3 {
 /* Navbar Content */
 .navbar--content {
     color:var(--darkblue);
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
@@ -203,7 +225,27 @@ h3 {
 .navbar--active-content {
     color:var(--primary)
 }
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icon {
+font-size: 32px;
+transition: color 0.3s ease;
+}
 /* Navbar Style End*/
+
+/* Not Found Page Starts */
+.page--not-found--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+/* Not Found Page Ends */
 
 /* Hero Section Style */
 .hero--section {
@@ -266,7 +308,7 @@ h3 {
 /* About Me Starts */
 .about--section {
     display: grid;
-    padding: 50px 85.3px;
+    padding: 160px 85.333px 133.333px;
     align-items: center;
     gap: 114.6px;
     grid-template-columns: repeat(2, 1fr);
@@ -280,10 +322,10 @@ h3 {
 /* Articles Starts*/
 .articles--section {
     display: flex;
-    padding: 50px 85px;
+    padding: 160px 85.333px 133.333px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 80px;
+    gap: 32px;
   }
 
 .articles--container-box {

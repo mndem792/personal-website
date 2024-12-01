@@ -6,7 +6,7 @@
             "src" : "./img/placeholder-image.png",
             "title": "The best binary search article",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, quaerat cupiditate? Provident, doloremque. Sed, fuga.",
-            "link":"Read More"
+            "link":"/binary-search"
         },
         {
             "id" : "2",

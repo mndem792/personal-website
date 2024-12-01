@@ -1,7 +1,7 @@
 import Navbar from "../Navbar"
 import HeroSection from "../HeroSection"
 import AboutMe from "../AboutMe"
-import Articles from "../Articles"
+import Articles from "../ArticlesPage/ArticlesPage"
 
 export default function Home() {
     return (

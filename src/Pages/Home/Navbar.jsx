@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
-
+import { Link, useLocation } from "react-router-dom";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGoogleScholar } from "react-icons/fa6";
 
 function Navbar() {
+    const {pathname} = useLocation();
+
+    if (! ["/aboutme", "/articles", "/"].includes(pathname)) 
+        return null;
+
     const [navActive, setNavActive] = useState(false)
 
     const toggleNav = () => {
@@ -36,9 +42,14 @@ function Navbar() {
 
     return (
         <nav className={`navbar ${navActive? "active" : ""}`}>
-            <div>
-                <img src="./img/logo.svg"/>
+            <div className="navbar--logo-container">
+                <img className="navbar--logo-image" src="./img/merab_malishava_2in2in_retouched.jpg"/>
+                <div className="navbar--logo-text">
+                    <p className="navbar--logo-text">Merab Malishava</p>
+                    <p>Software & Embedded Engineer</p>
+                </div>
             </div>
+
             <a 
                 className={`nav__hamburger ${navActive? "active" : ""}`} 
                 onClick={toggleNav}
@@ -52,7 +63,7 @@ function Navbar() {
             </a>
             <div className={`navbar--items ${navActive? "active" : ""}`}>
                 <ul>
-                    <li>
+                <li>
                         <Link 
                             onClick={closeMenu}
                             activeClass="navbar--active-content"
@@ -60,49 +71,7 @@ function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={500}
-                            to="heroSection"
-                            className="navbar--content"
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link 
-                            onClick={closeMenu}
-                            activeClass="navbar--active-content"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            to="curriculum-vitae"
-                            className="navbar--content"
-                        >
-                            CV
-                        </Link>
-                    </li>
-                    <li>
-                        <Link 
-                            onClick={closeMenu}
-                            activeClass="navbar--active-content"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            to="AboutMe"
-                            className="navbar--content"
-                        >
-                            About Me
-                        </Link>
-                    </li>
-                    <li>
-                        <Link 
-                            onClick={closeMenu}
-                            activeClass="navbar--active-content"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            to="Articles"
+                            to="/"
                             className="navbar--content"
                         >
                             Articles
@@ -116,26 +85,24 @@ function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={500}
-                            to="academic-publications"
+                            to="/aboutme"
                             className="navbar--content"
                         >
-                            Publications
+                            About Me
                         </Link>
                     </li>
                 </ul>
             </div>
-            <Link 
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="Contact"
-                className="btn btn-outline-primary"
-            >
-                Contact Me
-            </Link>
+            <div className="nav-icons">
+                {/* Google Scholar */}
+                <a href="https://scholar.google.com/citations?user=LOKsg1gAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">
+                <FaGoogleScholar className="nav-icon" color="4d90fe" />
+                </a>
+                {/* LinkedIn */}
+                <a href="https://www.linkedin.com/in/merab-malishava-aa1aa0140/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="nav-icon" color="0077b5" />
+                </a>
+            </div>
         </nav>
     )
 }
