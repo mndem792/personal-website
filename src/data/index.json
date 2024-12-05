@@ -3,24 +3,32 @@
     [
         {
             "id" : "1",
-            "src" : "./img/placeholder-image.png",
+            "src" : "/img/placeholder-image.png",
             "title": "The best binary search article",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, quaerat cupiditate? Provident, doloremque. Sed, fuga.",
             "link":"/binary-search"
         },
         {
             "id" : "2",
-            "src" : "./img/placeholder-image-1.png",
+            "src" : "/img/placeholder-image-1.png",
             "title": "Best leetcode strats",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, quaerat cupiditate? Provident, doloremque. Sed, fuga.",
             "link":"Read More"
         },
         {
-            "id" : "2",
-            "src" : "./img/placeholder-image-2.png",
+            "id" : "3",
+            "src" : "/img/placeholder-image-2.png",
             "title": "Ergodicity, Mixing, Chaos",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, quaerat cupiditate? Provident, doloremque. Sed, fuga.",
             "link":"Read More"
+        },
+        {
+            "id" : "4",
+            "src" : "/img/placeholder-image-2.png",
+            "title": "Example Article",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, quaerat cupiditate? Provident, doloremque. Sed, fuga.",
+            "link":"/example-article",
+            "contentFile" : "/content/example-article.md"
         }
     ]
 }

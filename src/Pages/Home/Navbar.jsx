@@ -46,7 +46,7 @@ function Navbar() {
                 <img className="navbar--logo-image" src="./img/merab_malishava_2in2in_retouched.jpg"/>
                 <div className="navbar--logo-text">
                     <p className="navbar--logo-text">Merab Malishava</p>
-                    <p>Software & Embedded Engineer</p>
+                    <p>Embedded & Software Engineer</p>
                 </div>
             </div>
 

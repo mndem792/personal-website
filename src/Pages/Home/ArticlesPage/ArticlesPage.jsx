@@ -1,7 +1,7 @@
 import data from "../../../data/index.json"
 import Flashcard from "./Flashcard"
 
-export default function Articles() 
+export default function ArticlesPage() 
 {
     return (
         <section className="articles--section" id="Articles">

@@ -1,20 +1,34 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { articles } from "../../../data/index.json";
+import { useState, useEffect } from "react";
+import remarkGfm from "remark-gfm"; // For GitHub-flavored markdown
+import data from "../../../data/index.json";
+import MarkdownRenderer from "./MarkdownRenderer"
+import NotFound from "../NotFound"
 
-function ArticleDetails() {
-    const { id } = useParams(); // Retrieve dynamic route parameter
-    const article = articles.find((a) => a.id === parseInt(id));
+function Article() {
+    const { link } = useParams();
+    const article = data?.articles?.find((a) => a.link === `/${link}`);
+    const [content, setContent] = useState("")
 
-    if (!article) return <p>Article not found.</p>;
+    useEffect(() => {
+        if (article && article.contentFile) {
+            fetch(article.contentFile)
+                .then((response) => response.text())
+                .then((content) => setContent(content))
+                .catch((err) => console.error("Failed to load content:", err));
+        }
+    }, [article]);
+
+    if (!article) return <NotFound/>;
 
     return (
-        <div className="article-details">
-            <h1>{article.title}</h1>
-            <p>{article.description}</p>
-            {/* Add more detailed content here */}
-        </div>
+        <section className="article--content">
+            <div>
+                <MarkdownRenderer content={content} />
+            </div>
+        </section>
     );
 }
 
-export default ArticleDetails;
+export default Article;

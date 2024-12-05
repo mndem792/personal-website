@@ -11,13 +11,13 @@ export default function Flashcard({article}){
     };
 
     return (
-        <div className="articles--section--card" onClick={handleClick}>
-            <div className="articles--section--img">
+        <div className="articles--section--flashcard" onClick={handleClick}>
+            <div className="articles--section--flashcard--img">
                 <img src = {article.src} alt="Placeholder"/>
             </div> 
-            <div className="articles--section--card--content">
+            <div className="articles--section--flashcard--content">
                 <div>
-                    <h3 className="articles--section--title">
+                    <h3 className="articles--section--flashcard--title">
                         {article.title}
                     </h3>
                     <p className="text-md">{article.description}</p>
