@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 
 function Navbar() {
@@ -97,6 +97,10 @@ function Navbar() {
                 {/* Google Scholar */}
                 <a href="https://scholar.google.com/citations?user=LOKsg1gAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">
                 <FaGoogleScholar className="nav-icon" color="4d90fe" />
+                </a>
+                {/*Github*/}
+                <a href="https://github.com/mndem792/" target="_blank" rel="noopener noreferrer">
+                <FaGithub className="nav-icon" color="171515" />
                 </a>
                 {/* LinkedIn */}
                 <a href="https://www.linkedin.com/in/merab-malishava-aa1aa0140/" target="_blank" rel="noopener noreferrer">
