@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import remarkGfm from "remark-gfm"; // For GitHub-flavored markdown
 import data from "../../../data/index.json";
 import MarkdownRenderer from "./MarkdownRenderer"
+import {Navigate} from 'react-router-dom';
 import NotFound from "../NotFound"
 
 function Article() {
@@ -20,7 +21,7 @@ function Article() {
         }
     }, [article]);
 
-    if (!article) return <NotFound/>;
+    if (!article) return <Navigate to="/" replace />
 
     return (
         <section className="article--section" >

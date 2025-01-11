@@ -6,9 +6,6 @@ import { FaGoogleScholar } from "react-icons/fa6";
 function Navbar() {
     const {pathname} = useLocation();
 
-    if (! ["/aboutme", "/articles", "/"].includes(pathname)) 
-        return null;
-
     const [navActive, setNavActive] = useState(false)
 
     const toggleNav = () => {
