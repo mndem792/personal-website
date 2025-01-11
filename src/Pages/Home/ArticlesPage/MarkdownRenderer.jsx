@@ -1,22 +1,26 @@
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from "rehype-raw";
 
 export default function MarkdownRenderer({ content }) {
     return (
         <ReactMarkdown className="markdown--content"
+            children={content}
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]} // Enable raw HTML processing
             components={{
                 code({ node, inline, className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || "");
                     return !inline && match ? (
-                        <SyntaxHighlighter
-                            style={darcula}
-                            language={match[1]}
-                            PreTag="div"
-                            {...props}
-                        >
+                        <pre className="markdown--code-block" {...props}>    
+                            <SyntaxHighlighter
+                                language={match[1]}
+                                {...props}
+                            >
                             {String(children).replace(/\n$/, "")}
-                        </SyntaxHighlighter>
+                            </SyntaxHighlighter>
+                        </pre>
                     ) : (
                         <code className={className} {...props}>
                             {children}
@@ -25,7 +29,6 @@ export default function MarkdownRenderer({ content }) {
                 },
             }}
         >
-            {content}
         </ReactMarkdown>
     );
 }

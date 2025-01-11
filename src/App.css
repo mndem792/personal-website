@@ -469,3 +469,15 @@ stroke: #006b6a;
     font-weight: bold;
     unicode-bidi: isolate;
 }
+
+.markdown--code-block {
+    font-size: 16px; /* Set the font size for the code block */
+    margin: 16px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+  }
+  
+  .markdown--code-block code {
+    font-size: 1em; /* Font size inside the code block */
+  }

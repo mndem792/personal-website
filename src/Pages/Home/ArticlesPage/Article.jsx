@@ -1,11 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import remarkGfm from "remark-gfm"; // For GitHub-flavored markdown
 import data from "../../../data/index.json";
 import MarkdownRenderer from "./MarkdownRenderer"
 import {Navigate} from 'react-router-dom';
-import NotFound from "../NotFound"
 
 function Article() {
     const { link } = useParams();
