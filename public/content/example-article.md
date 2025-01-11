@@ -1,5 +1,5 @@
-# Example Article Title
-This is an example article written in **Markdown**.
+# Intro
+We devote our studies to the subject of weakly nonintegrable dynamics of systems with a macroscopic number of degrees of freedom. Our main points of interest are the relations between the timescales of thermalization and the timescales of chaotization; the choice of appropriate observables and the structure of equations coupling them; identifying the classes of weakly nonintegrable dynamics and developing tools to diagnose the properties specific to such classes. We discuss the traditional in the field methods for thermalization timescale computation and employ them to study the scaling the timescale with the proximity to the integrable limit. 
 
 ## Subheading
 - Item 1

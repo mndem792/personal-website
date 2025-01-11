@@ -13,7 +13,7 @@ export default function Flashcard({article}){
     return (
         <div className="articles--section--flashcard" onClick={handleClick}>
             <div className="articles--section--flashcard--img">
-                <img src = {article.src} alt="Placeholder"/>
+                <img src = {article.image} alt="Placeholder"/>
             </div> 
             <div className="articles--section--flashcard--content">
                 <div>

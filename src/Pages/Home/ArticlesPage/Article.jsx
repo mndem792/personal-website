@@ -23,8 +23,10 @@ function Article() {
     if (!article) return <NotFound/>;
 
     return (
-        <section className="article--content">
-            <div>
+        <section className="article--section" >
+            <h1> {article.title} </h1>
+            <img src={article.image} className="article--main-image"></img>
+            <div className="article--content">
                 <MarkdownRenderer content={content} />
             </div>
         </section>
