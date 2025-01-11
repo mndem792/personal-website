@@ -39,13 +39,15 @@ function Navbar() {
 
     return (
         <nav className={`navbar ${navActive? "active" : ""}`}>
-            <div className="navbar--logo-container">
-                <img className="navbar--logo-image" src="./img/merab_malishava_2in2in_retouched.jpg"/>
-                <div className="navbar--logo-text">
-                    <p className="navbar--logo-text">Merab Malishava</p>
-                    <p>Embedded & Software Engineer</p>
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="navbar--logo-container">
+                    <img className="navbar--logo-image" src="./img/merab_malishava_2in2in_retouched.jpg"/>
+                    <div className="navbar--logo-text">
+                        <p className="navbar--logo-text">Merab Malishava</p>
+                        <p>Embedded & Software Engineer</p>
+                    </div>
                 </div>
-            </div>
+            </Link>
 
             <a 
                 className={`nav__hamburger ${navActive? "active" : ""}`} 
